@@ -16,10 +16,6 @@ What have I done to improve the design?
 
 ## Getting Started
 
-### Prerequisites
-- Java JDK 1.8 or higher
-- Gradle 8.5 or higher
-
 ### Building the Project
 To build the project, run the following command in the root directory:
 
