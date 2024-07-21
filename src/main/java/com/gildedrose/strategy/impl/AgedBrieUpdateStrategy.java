@@ -13,8 +13,6 @@ import com.gildedrose.strategy.ItemUpdateStrategy;
  */
 public class AgedBrieUpdateStrategy implements ItemUpdateStrategy {
 
-    private static final int MAX_QUALITY = 50;
-
     /**
      * Updates the quality of an "Aged Brie" item.
      * The quality of "Aged Brie" increases by 1 each day before the sell by date passes,

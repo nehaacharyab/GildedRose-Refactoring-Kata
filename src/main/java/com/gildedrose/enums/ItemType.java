@@ -1,6 +1,6 @@
 package com.gildedrose.enums;
 
-import java.util.Arrays;
+import static java.util.Arrays.stream;
 
 /**
  * Enum representing the different types of items managed by the Gilded Rose application.
@@ -22,10 +22,6 @@ public enum ItemType {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
     /**
      * Converts a string name to an ItemType enum constant.
      * If the name does not match any of the defined item types, it defaults to DEFAULT.
@@ -34,8 +30,8 @@ public enum ItemType {
      * @return The corresponding ItemType enum constant.
      */
     public static ItemType fromName(String name) {
-        return Arrays.stream(ItemType.values())
-                .filter(itemType -> itemType.getName().equals(name))
+        return stream(ItemType.values())
+                .filter(itemType -> itemType.name.equals(name))
                 .findFirst()
                 .orElse(DEFAULT);
     }

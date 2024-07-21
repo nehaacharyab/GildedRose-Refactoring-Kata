@@ -3,6 +3,8 @@ package com.gildedrose;
 import com.gildedrose.exception.HordeException;
 import com.gildedrose.model.Item;
 
+import static java.lang.Integer.parseInt;
+
 public class TexttestFixture {
     public static void main(String[] args) throws HordeException {
         System.out.println("OMGHAI!");
@@ -20,10 +22,7 @@ public class TexttestFixture {
 
         GildedRose app = new GildedRose(items);
 
-        int days = 2;
-        if (args.length > 0) {
-            days = Integer.parseInt(args[0]) + 1;
-        }
+        int days = args.length > 0 ? (parseInt(args[0]) + 1) : 2;
 
         for (int i = 0; i < days; i++) {
             System.out.println("-------- day " + i + " --------");

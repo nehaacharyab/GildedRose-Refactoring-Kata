@@ -27,7 +27,7 @@ To build the project, run the following command in the root directory:
 ./gradlew -q text
 ```
 
-### Specify Number of Days
+### Use below command to run the test for a specific number of days
 For e.g. 10 days:
 
 ```bash

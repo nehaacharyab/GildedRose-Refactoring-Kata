@@ -1,9 +1,10 @@
 package com.gildedrose.factory;
 
-import com.gildedrose.enums.ItemType;
 import com.gildedrose.model.Item;
 import com.gildedrose.strategy.*;
 import com.gildedrose.strategy.impl.*;
+
+import static com.gildedrose.enums.ItemType.fromName;
 
 /**
  * Factory class for creating ItemUpdateStrategy instances.
@@ -23,8 +24,7 @@ public class ItemFactory {
      * @return An instance of ItemUpdateStrategy specific to the item type.
      */
     public static ItemUpdateStrategy createItemBehavior(Item item) {
-        ItemType itemType = ItemType.fromName(item.name);
-        switch (itemType) {
+        switch (fromName(item.name)) {
             case AGED_BRIE:
                 return new AgedBrieUpdateStrategy();
             case BACKSTAGE_PASSES:
